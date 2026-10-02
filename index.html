@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaun Lobo — Mechatronics & Robotics Portfolio</title>
+  <meta name="description" content="Shaun Lobo — Second-year BEng Mechatronics & Robotics, University of Sheffield. Winner Imperial Maker Challenge 2024. Seeking 12-month industrial placement in robotics, embedded systems, automation." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">SL<span>.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero container" id="top">
+    <div class="hero-text">
+      <div class="badge">🏆 1st Place — Imperial Maker Challenge 2024 (Solo)</div>
+      <h1>Shaun Lobo</h1>
+      <h2>BEng Mechatronics & Robotics · University of Sheffield</h2>
+      <p class="lede">
+        Second-year engineer (First-Class Year 1: 74.3%) seeking a 12-month industrial placement
+        in robotics, embedded systems or automation. I design and program autonomous systems
+        with embedded C, sensor feedback, motor control and closed-loop control — and I ship.
+      </p>
+      <div class="hero-stats">
+        <div><strong>1st</strong><span>Imperial Maker Challenge</span></div>
+        <div><strong>74.3%</strong><span>Year 1 average</span></div>
+        <div><strong>200+</strong><span>iOS app users shipped</span></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View projects</a>
+        <a href="mailto:slobo1@sheffield.ac.uk" class="btn btn-ghost">slobo1@sheffield.ac.uk</a>
+      </div>
+      <p class="hero-meta">Sheffield, UK · 07780 718840 · <a href="https://apps.apple.com/gb/app/onethingdaily/id6787077896">App Store</a> · <span class="todo-inline">Add GitHub / LinkedIn links here</span></p>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-header">Featured build — Imperial Winner</div>
+      <img src="images/glove-frame.jpg" alt="Wire-frame prototype of assistive robotic glove with tendon actuation" class="hero-img" loading="lazy" />
+      <div class="hero-card-body">
+        <h3>Assistive Robotic Glove</h3>
+        <p>Motor-driven grip/release assist. Flex-sensor actuation, servo → stepper iteration, custom Onshape parts, 3D-printed mounts.</p>
+        <a href="#project-glove">Read case study ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Built for users, tested on hardware, iterated under time pressure.</p>
+
+      <!-- GLOVE -->
+      <article class="project featured" id="project-glove">
+        <div class="pill-row">
+          <span class="pill gold">🥇 1st Place</span>
+          <span class="pill">Imperial College London 2024</span>
+          <span class="pill">Solo entrant</span>
+        </div>
+        <h3>Assistive Robotic Glove</h3>
+        <p>
+          Designed and built a motor-driven assistive glove to support grip and release
+          for users with impaired hand movement. Solo winner at Imperial College London.
+        </p>
+        <ul class="bullets">
+          <li>Sensor-controlled actuation using <strong>flex sensors + servo motors</strong>, iterated to <strong>stepper motors</strong> for torque and positioning precision</li>
+          <li>Custom mechanical components in <strong>Onshape</strong>, mounts manufactured with <strong>3D printing</strong></li>
+          <li>Bench-tested, calibrated sensors, fault-found under competition time constraints</li>
+          <li>Chose low-cost actuation to meet build-time and budget constraints while prioritising reliability and repairability</li>
+        </ul>
+        <div class="tags">
+          <span>Arduino / Embedded C</span><span>Flex Sensors</span><span>Servo / Stepper</span><span>Onshape</span><span>3D Printing</span>
+        </div>
+        <div class="glove-gallery">
+          <figure class="project-photo">
+            <img src="images/glove-frame.jpg" alt="Wire frame hand prototype with blue tendon lines and orange yarn" loading="lazy" />
+            <figcaption>Wire-frame hand — tendon routing test</figcaption>
+          </figure>
+          <figure class="project-photo">
+            <img src="images/glove-finger.jpg" alt="Single finger test rig with wooden plates on blue felt and orange tendon" loading="lazy" />
+            <figcaption>Single-finger rig — laser-cut plates, tendon pull</figcaption>
+          </figure>
+          <figure class="project-photo">
+            <img src="images/glove-kit.jpg" alt="Grove Beginner Kit for Arduino with breadboard wiring" loading="lazy" />
+            <figcaption>Control electronics — Grove Arduino</figcaption>
+          </figure>
+          <figure class="project-photo">
+            <img src="images/glove-electronics.jpg" alt="Close-up of Grove board wiring and breadboard button circuit" loading="lazy" />
+            <figcaption>Sensor wiring — input test circuit</figcaption>
+          </figure>
+          <figure class="project-photo glove-video">
+            <video controls preload="metadata" playsinline>
+              <source src="images/glove-demo2.mp4" type="video/mp4" />
+              Your browser does not support video.
+            </video>
+            <figcaption>Demo — grip / release</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project featured" id="project-line">
+        <div class="pill-row">
+          <span class="pill">University of Sheffield</span>
+          <span class="pill">Team project</span>
+          <span class="pill">Stretch goals achieved</span>
+        </div>
+        <h3>Autonomous Line-Following Vehicle</h3>
+        <p class="meta">Embedded C, MATLAB/Simulink, I2C · PIC18F2221 · 10-bit PWM</p>
+        <ul class="bullets">
+          <li>Outer loop, lane change, 5-sec stop, 180° turn + return with LED signalling</li>
+          <li>8× IR array via I2C (SX1509) with −12° to +12° lookup table</li>
+          <li>P-controller tuned in Simulink, deployed in C with 10-bit PWM</li>
+          <li>Both stretch goals: IR proportional auto-braking + encoder 180° rotation</li>
+        </ul>
+        <div class="tags"><span>Embedded C</span><span>PIC18F2221</span><span>Simulink</span><span>I2C</span></div>
+        <div class="glove-gallery">
+          <figure class="project-photo">
+            <img src="images/line-follower.png" alt="Autonomous line-following vehicle on black track with white line" loading="lazy" />
+            <figcaption>On track — IR array over white line</figcaption>
+          </figure>
+          <figure class="project-photo glove-video">
+            <video controls preload="metadata" playsinline>
+              <source src="images/line-track.mp4" type="video/mp4" />
+              Your browser does not support video.
+            </video>
+            <figcaption>Track run — loop, lane change, 180° return</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project featured" id="project-beacon">
+        <div class="pill-row">
+          <span class="pill">University of Sheffield</span>
+          <span class="pill">Team of 3</span>
+          <span class="pill">Coding Lead</span>
+        </div>
+        <h3>Beacon-Seeking Obstacle-Avoidance Vehicle</h3>
+        <p class="meta">Embedded C · IR beacon + IR distance · Differential drive</p>
+        <ul class="bullets">
+          <li>Autonomous seek/avoid with IR beacon + IR distance sensors</li>
+          <li>Differential-drive motor control</li>
+          <li>Led software development and debugging within a three-person team</li>
+        </ul>
+        <div class="tags"><span>Embedded C</span><span>IR Sensors</span><span>Motor Control</span></div>
+        <div class="glove-gallery">
+          <figure class="project-photo glove-video">
+            <video controls preload="metadata" playsinline>
+              <source src="images/beacon-demo.mp4" type="video/mp4" />
+              Your browser does not support video.
+            </video>
+            <figcaption>Reference demo — beacon seek + avoid (same behaviour as our build)</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <div class="cards">
+        <article class="card">
+          <figure class="project-photo">
+            <img src="images/suspension-sports.png" alt="Chassis displacement step response sports mode with saturation" loading="lazy" />
+            <figcaption>Sports mode step — 0.19s rise, 49.2% overshoot, 1.98s settling</figcaption>
+          </figure>
+          <h3>Quarter-Car Suspension Simulation</h3>
+          <p class="meta">MATLAB / Simulink · Physical Systems</p>
+          <ul class="bullets">
+            <li>Simulink quarter-car + MATLAB driver (cruise vs sports, 0.1 m step)</li>
+            <li>Sports: 0.19s rise, 49.2% overshoot, 1.98s settling vs cruise 0.23s / 56.2% / 3.14s</li>
+            <li>16-point K2/C2 sweep → selected K2=30k, C2=6000 balancing response vs comfort</li>
+            <li>Full-axle model with roadProfile.mat, RMSE/MAE traction + stability analysis</li>
+          </ul>
+          <div class="tags"><span>MATLAB</span><span>Simulink</span><span>Control</span></div>
+          <figure class="project-photo">
+            <img src="images/suspension-cruise.png" alt="Chassis displacement step response cruise mode with saturation" loading="lazy" />
+            <figcaption>Cruise mode step — softer, longer settling vs sports</figcaption>
+          </figure>
+          <figure class="project-photo">
+            <img src="images/suspension-model.png" alt="Simulink block diagram of car suspension model" loading="lazy" />
+            <figcaption>Simulink model — quarter-car with bump-stop saturation</figcaption>
+          </figure>
+        </article>
+
+        <article class="card">
+          <h3>OneThingDaily — Live iOS App</h3>
+          <p class="meta">Solo · React Native, Expo, Supabase · <a href="https://apps.apple.com/gb/app/onethingdaily/id6787077896">App Store ↗</a></p>
+          <figure class="project-photo">
+            <img src="images/app-store.png" alt="OneThingDaily App Store listing with 5.0 rating and app screenshots" loading="lazy" />
+            <figcaption>Live on App Store — 5.0★, 200+ users, shipped solo</figcaption>
+          </figure>
+          <ul class="bullets">
+            <li>Shipped production app with <strong>200+ users</strong>: goals, streaks, social, push, Apple Sign-In, Family Controls</li>
+            <li>EAS, TestFlight, App Store Connect, RevenueCat IAP</li>
+          </ul>
+          <div class="tags"><span>TypeScript</span><span>React Native</span><span>Supabase</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="section-title">Technical skills</h2>
+      <div class="skills-grid">
+        <div><h4>Languages</h4><p>C (PIC / Arduino), Python, MATLAB/Simulink, JavaScript/TypeScript (React Native)</p></div>
+        <div><h4>Embedded</h4><p>PIC18F2221, I2C, 10-bit PWM, servo / stepper, flex sensors, IR arrays, IR distance/beacon, wheel encoders</p></div>
+        <div><h4>Tools</h4><p>Onshape CAD, 3D printing, V-model testing, Git, Expo/EAS, Supabase, RevenueCat, TestFlight / App Store</p></div>
+        <div><h4>Methods</h4><p>Closed-loop control, sensor calibration, bench testing, parameter sweeps, RMSE/MAE validation</p></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="two-col">
+        <div class="edu">
+          <h3>University of Sheffield — BEng Mechatronics & Robotics</h3>
+          <p class="meta">2025 – 2028 (Expected) · Year 1: 74.3% First-Class</p>
+          <ul class="bullets">
+            <li>ELE119 Modelling, Analysis & Control — 80%</li>
+            <li>ELE122 — 79% · ELE104 — 78% · ELE105 — 77%</li>
+            <li>ELE118 — 72% · ELE120 — 71% · ELE108 — 66%</li>
+          </ul>
+        </div>
+        <div class="edu">
+          <h3>London Oratory School — Sixth Form</h3>
+          <p class="meta">A-Levels</p>
+          <ul class="bullets">
+            <li>Mathematics A* · Further Mathematics A · Chemistry A · Economics A</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="edu">
+        <h3>Waiter — High Society</h3>
+        <p class="meta">Jun – Sep 2026</p>
+        <p>Delivered service at fast-paced events managing multiple tables with accuracy; teamwork and time-management alongside studies.</p>
+      </div>
+      <p class="interests"><strong>Interests:</strong> robotics, autonomous & assistive systems, embedded control · <strong>Societies:</strong> Volleyball, Tennis, American Football</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      <p>Open to 12-month industrial placements in robotics, embedded systems and automation (also 13-month from July 2027).</p>
+      <div class="hero-cta">
+        <a href="mailto:slobo1@sheffield.ac.uk" class="btn">slobo1@sheffield.ac.uk</a>
+        <a href="tel:+447780718840" class="btn btn-ghost">07780 718840</a>
+      </div>
+      <p class="small">📄 <span class="todo-inline">Upload your CV PDF as <code>assets/Shaun_Lobo_CV.pdf</code> then link it here</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Shaun Lobo · Built for GitHub Pages · <a href="https://github.com/">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
